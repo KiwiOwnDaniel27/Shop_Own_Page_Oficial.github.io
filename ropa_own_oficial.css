@@ -1,5 +1,6 @@
 html{
     background-color: black;
+    text-align: center;
 }
 
 header{
@@ -18,6 +19,20 @@ header img{
     margin-left: 75px;
     margin-right: -525px;
     margin-top: 10px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
 }
 
 p{
@@ -92,23 +107,12 @@ footer a:hover {
     color: rgb(0, 0, 0);
 }
 
-#logo{
-    margin-right: 150px;
-}
-
-#lineas{
-    margin-left: 375px;
-}
-
 .logo{
-    width: 65x;
-    height: 65px;
     background: url(IMG/LOGO.jpg);
-    background-position: center;
     background-size: cover;
     filter: drop-shadow(0px 7px 21px #01e701);
     animation: rotar 5s linear infinite;
-    margin-left: 615px;
+    margin: 0px;
 }
 
 .logo:hover{
@@ -278,20 +282,13 @@ color: white
     text-align: center;
 }
 
-@media screen and (max-width:850px) {
-    .contenedor-principal{
-        display: block;
-    }
-    .contenedor-productos{
-        width: 100% !important;
-    }
-    .carrito{
-        width: 100%;
-    }
-}
-
 .contenedor .contenedor-productos .categ{
     text-align: center;
+}
+
+.bienvenida{
+    text-align: center;
+    justify-content: center;
 }
 
 .bienvenida{
