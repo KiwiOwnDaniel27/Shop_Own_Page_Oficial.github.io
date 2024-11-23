@@ -114,7 +114,7 @@ footer a:hover {
     background-size: cover;
     filter: drop-shadow(0px 7px 21px #01e701);
     animation: rotar 5s linear infinite;
-    margin-left: 615px;
+    margin-left: 0px;
 }
 
 .logo:hover{
