@@ -12,9 +12,11 @@ body {
     place-items: center;
 }
 
-.header{
+.encabezado{
     display: flex;
     align-items: center;
+    font-size: 30px;
+    margin-right: 400px;
 }
 
 header{
@@ -33,8 +35,8 @@ header h3{
 header img{
     display: block;
     margin-top: 10px;
-    margin-right: 250px;
-    margin-left: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 h1{
