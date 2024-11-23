@@ -50,6 +50,12 @@ p{
     text-align: center;
 }
 
+a{
+margin-top: auto;
+color: white;
+text-decoration: none;
+}
+
 table{
     margin-left: 130px;
 }
