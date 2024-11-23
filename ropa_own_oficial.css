@@ -291,3 +291,15 @@ color: white
 .logosapp{
     text-align: center;
 }
+
+@media screen and (max-width:850px) {
+    .contenedor-principal{
+        display: block;
+    }
+    .contenedor-productos{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+}
