@@ -8,8 +8,8 @@ html{
 }
 
 body {
-   display: grid;
-   place-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .header{
@@ -113,7 +113,7 @@ footer{
 
 footer section{
     float: left;
-    margin-right: 100px;
+    margin-right: 0px;
     padding-left: 300px;
 }
 
@@ -336,4 +336,16 @@ color: white
 
 .boton-producto{
     font-size: 15px;
+}
+
+button{
+    font-size: 18px;
+}
+
+.foter{
+    font-size: 25px;
+}
+
+.link{
+    font-size: 25px;
 }
