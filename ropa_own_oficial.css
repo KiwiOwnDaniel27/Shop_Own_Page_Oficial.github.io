@@ -39,11 +39,13 @@ header img{
 h1{
     color: white;
     text-align: center;
+    font-size: 75px;
 }
 
 h2{
     color: white;
     text-align: center;
+    font-size: 30px;
 }
 
 h3{
