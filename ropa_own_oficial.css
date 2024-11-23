@@ -56,7 +56,7 @@ h3{
 p{
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 a{
@@ -99,6 +99,7 @@ table{
     margin-top: 10px;
     margin-right: 40px;
     text-align: center;
+    border-radius: 27px;
 }
 
 button{
@@ -344,9 +345,9 @@ button{
 }
 
 .foter{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .link{
-    font-size: 25px;
+    font-size: 30px;
 }
