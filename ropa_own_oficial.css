@@ -6,12 +6,11 @@ html{
 header{
     display: flex;
     align-items: center;
-    width: 100%;
     margin-top: 10px;
 }
 
 header h3{
-    margin-left: 310px;
+    margin-left: 500px;
     width: 100%;
 }
 
