@@ -4,7 +4,7 @@ html{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: black;
+    background-color: #101720;
 }
 
 body {
@@ -81,7 +81,7 @@ table{
 
 
 .producto{
-    background-color: black;
+    background-color: #101720;
     text-align: center;
     display: inline-flexbox;
     width: 225px;
@@ -257,7 +257,7 @@ color: white
 }
 
 .carrito-total{
-    background-color: rgb(0, 0, 0);
+    background: rgb(53, 119, 53);
     padding: 30px;
 }
 
@@ -274,7 +274,7 @@ color: white
     display: block;
     width: 100%;
     border: none;
-    background: rgb(53, 119, 53);
+    background-color: #101720;
     color: white;
     border-radius: 5px;
     font-size: 10px;
