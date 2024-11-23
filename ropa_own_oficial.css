@@ -93,7 +93,7 @@ table{
     text-align: center;
     display: inline-flexbox;
     width: 225px;
-    height: 440px;
+    height: 460px;
     color: white;
     margin-top: 10px;
     margin-right: 40px;
@@ -324,4 +324,16 @@ color: white
 
 #tabla-referencia{
     margin-left: -40px;
+}
+
+.titulo-producto{
+    font-size: 20px;
+}
+
+.precio-producto{
+    font-size: 20px;
+}
+
+.boton-producto{
+    font-size: 15px;
 }
