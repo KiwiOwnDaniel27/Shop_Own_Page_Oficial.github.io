@@ -12,6 +12,11 @@ body {
    place-items: center;
 }
 
+.header{
+    display: flex;
+    align-items: center;
+}
+
 header{
     display: flex;
     align-items: center;
