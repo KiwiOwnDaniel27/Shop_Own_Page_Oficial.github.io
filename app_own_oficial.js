@@ -120,5 +120,12 @@ function restarCantidad(event){
 }
 
 function agregarAlCarritoClicked(event){
-    alert();
+    var button = event.target;
+    var item = button.parentElement;
+    var titulo = item.getElementsByClassName('titulo-producto')[0].innerText;
+    console.log(titulo);
+    var precio = item.getElementsByClassName('precio-producto')[0].innerText;
+    var imagenSrc = item.getElementsByClassName('img-producto')[0].src;
+    console.log(imagenSrc);
+
 }
