@@ -104,9 +104,6 @@ table{
     border-radius: 27px;
 }
 
-button{
-    font-size: 18px;
-}
 
 footer{
     background-color:  rgb(53, 119, 53);
@@ -160,11 +157,11 @@ footer a:hover {
 color: white
 }
 
-.carrito-item-titulo{
+.carrito-producto-titulo{
     color: white;
 }
 
-.carrito-item-precio{
+.carrito-producto-precio{
     color: white;
 }
 
@@ -186,7 +183,7 @@ color: white
     position: relative;
     top: 0;
     transition: .3s;
-
+    opacity: 100%;
 }
 
 .header-carrito{
@@ -196,7 +193,7 @@ color: white
     color: rgb(255, 255, 255);
 }
 
-.carrito-item{
+.carrito-producto{
     display: flex;
     align-items: center;
     position: relative;
@@ -204,23 +201,23 @@ color: white
     padding: 20px;
 }
 
-.carrito-item img{
+.carrito-producto img{
     margin-right: 20px;
 }
 
-.carrito .carrito-item .carrito-item-titulo{
+.carrito .carrito-producto .carrito-producto-titulo{
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.carrito .carrito-item .selector-cantidad{
+.carrito .carrito-producto .selector-cantidad{
     display: inline-block;
     margin-right: 27px;
 }
 
-.carrito .carrito-item .carrito-item-cantidad{
+.carrito .carrito-producto .carrito-producto-cantidad{
     border: none;
     font-size: 18px;
     background: transparent;
@@ -230,7 +227,7 @@ color: white
     text-align: center;
 }
 
-.carrito .carrito-item .selector-cantidad i{
+.carrito .carrito-producto .selector-cantidad i{
     font-size: 18px;
     width: 32px;
     height: 32px;
@@ -241,14 +238,14 @@ color: white
     cursor: pointer;
 }
 
-.carrito .carrito-item .carrito-item-precio{
+.carrito .carrito-producto .carrito-producto-precio{
     font-weight: bold;
     display: inline-block;
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.carrito .carrito-item .btn-eliminar{
+.carrito .carrito-producto .btn-eliminar{
     position: absolute;
     right: 15px;
     color: white;
@@ -264,7 +261,7 @@ color: white
     z-index: 20;
 }
 
-.carrito .carrito-item .btn-eliminar i{
+.carrito .carrito-producto .btn-eliminar i{
     pointer-events: none;
 }
 
