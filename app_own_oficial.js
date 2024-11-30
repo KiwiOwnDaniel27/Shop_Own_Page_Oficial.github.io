@@ -38,6 +38,8 @@ function ready(){
         actualizarTotalCarrito();
     }
     
+    //Agregar funcionalidad al boton añadir al carrito
+    document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked);
 }
 
 
@@ -130,6 +132,9 @@ function añadirAlCarritoClicked(event){
 
     //La siguiente funcion agrega el elemento al carrito, lo mandamos por parametros los valores
     añadirProductoAlCarrito(titulo, precio, imagenSrc);
+
+    //Hacemos visible al carrito cuando se agrega por primera vez
+    hacerVisibleCarrito();
 }
 
 function añadirProductoAlCarrito(titulo, precio, imagenSrc){
@@ -168,4 +173,39 @@ function añadirProductoAlCarrito(titulo, precio, imagenSrc){
     `
     producto.innerHTML = ProductoCarritoContenido;
     productosCarrito.append(producto);
+
+    //Agregamos la funcionalidad de eliminar el nuevo producto
+    producto.getElementsByClassName('btn-eliminar')[0].addEventListener('click', eliminarProductoCarrito);
+
+    //Agregamos la funcionalidad de sumar el nuevo producto
+    var botonesSumarCantidad = producto.getElementsByClassName('sumar-cantidad')[0];
+    botonesSumarCantidad.addEventListener('click', sumarCantidad);
+
+   //Agregamos la funcionalidad de restar el nuevo producto
+    var botonesRestarCantidad = producto.getElementsByClassName('restar-cantidad')[0];
+    botonesRestarCantidad.addEventListener('click', restarCantidad);
+    actualizarTotalCarrito();
+}
+
+function pagarClicked(event){
+    alert("Gracias por su compra");
+    //elimino todos los elementos del carrito
+    var carritoProductos = document.getElementsByClassName('carrito-productos')[0];
+    while(carritoProductos.hasChildNodes()){
+        carritoProductos.removeChild(carritoProductos.firstChild);
+    }
+    actualizarTotalCarrito();
+
+    //funcion que hace ocultar al carrito
+    ocultarCarrito();
+}
+
+function hacerVisibleCarrito(){
+    carritoVisible = true;
+    var carrito = document.getElementsByClassName('carrito')[0];
+    carrito.style.marginRight = '0';
+    carrito.style.opacity = '1';
+
+    var productos = document.getElementsByClassName('contenedor-productos')[0];
+    productos.style.width='60%';
 }
