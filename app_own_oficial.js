@@ -31,7 +31,7 @@ function ready(){
     }
 
     //Agregamos funcionalidad a los botones agregar al carrito
-    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
+    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-producto');
     for (var i=0; i <botonesAgregarAlCarrito.length; i++){
         var button = botonesAgregarAlCarrito[i];
         button.addEventListener('click', agregarAlCarritoClicked);
@@ -72,7 +72,7 @@ function actualizarTotalCarrito(){
         var cantidadProducto = producto.getElementsByClassName('carrito-producto-cantidad')[0];
         var cantidad = cantidadProducto.value;
         console.log(cantidad);
-        total =+ (precio * cantidad);
+        total = total + (precio * cantidad);
     }
     total = Math.round(total*100)/100;
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total + ',00';
