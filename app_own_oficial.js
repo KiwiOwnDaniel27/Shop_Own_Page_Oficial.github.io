@@ -207,5 +207,5 @@ function hacerVisibleCarrito(){
     carrito.style.opacity = '1';
 
     var productos = document.getElementsByClassName('contenedor-productos')[0];
-    productos.style.width='60%';
+    productos.style.width='100%';
 }
