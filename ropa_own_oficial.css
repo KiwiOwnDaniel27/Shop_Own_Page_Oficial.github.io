@@ -15,7 +15,7 @@ body {
 .encabezado{
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 45px;
     margin-right: 400px;
 }
 
@@ -42,13 +42,13 @@ header img{
 h1{
     color: white;
     text-align: center;
-    font-size: 75px;
+    font-size: 90px;
 }
 
 h2{
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 h3{
@@ -96,7 +96,7 @@ table{
     text-align: center;
     display: inline-flexbox;
     width: 250px;
-    height: 560px;
+    height: 580px;
     color: white;
     margin-top: 10px;
     margin-right: 70px;
@@ -322,7 +322,7 @@ color: white
 .informacion{
     text-align: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #tabla-referencia{
@@ -356,4 +356,20 @@ button{
 
 .direccion{
     font-size: 25px;
+}
+
+.categ{
+    font-size: 55px;
+}
+
+.titulo-producto{
+    font-size: 30px;
+}
+
+.precio-producto{
+    font-size: 25px;
+}
+
+.producto p{
+    font-size: 20px;
 }
