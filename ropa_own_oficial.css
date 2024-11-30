@@ -183,7 +183,8 @@ color: white
     position: relative;
     top: 0;
     transition: .3s;
-    opacity: 100%;
+    opacity: 0;
+    margin-right: -100%;
 }
 
 .header-carrito{
@@ -335,9 +336,6 @@ color: white
     font-size: 20px;
 }
 
-.boton-producto{
-    font-size: 15px;
-}
 
 button{
     font-size: 18px;
