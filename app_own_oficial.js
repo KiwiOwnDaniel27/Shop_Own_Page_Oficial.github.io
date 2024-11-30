@@ -31,10 +31,10 @@ function ready(){
     }
 
     //Agregamos funcionalidad a los botones agregar al carrito
-    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-producto');
-    for (var i=0; i <botonesAgregarAlCarrito.length; i++){
-        var button = botonesAgregarAlCarrito[i];
-        button.addEventListener('click', agregarAlCarritoClicked);
+    var botonesAñadirAlCarrito = document.getElementsByClassName('boton-producto');
+    for (var i=0; i <botonesAñadirAlCarrito.length; i++){
+        var button = botonesAñadirAlCarrito[i];
+        button.addEventListener('click', añadirAlCarritoClicked);
         actualizarTotalCarrito();
     }
     
@@ -80,7 +80,7 @@ function actualizarTotalCarrito(){
 
 function ocultarCarrito(){
     var carritoProductos = document.getElementsByClassName('carrito-productos')[0];
-    if(carritoProductos.childElementCount==1){
+    if(carritoProductos.childElementCount==0){
         var carrito = document.getElementsByClassName('carrito')[0];
         carrito.style.marginRight = '-100%';
         carrito.style.opacity='0%';
@@ -119,13 +119,53 @@ function restarCantidad(event){
     }
 }
 
-function agregarAlCarritoClicked(event){
+function añadirAlCarritoClicked(event){
     var button = event.target;
-    var item = button.parentElement;
-    var titulo = item.getElementsByClassName('titulo-producto')[0].innerText;
+    var producto = button.parentElement;
+    var titulo = producto.getElementsByClassName('titulo-producto')[0].innerText;
     console.log(titulo);
-    var precio = item.getElementsByClassName('precio-producto')[0].innerText;
-    var imagenSrc = item.getElementsByClassName('img-producto')[0].src;
+    var precio = producto.getElementsByClassName('precio-producto')[0].innerText;
+    var imagenSrc = producto.getElementsByClassName('img-producto')[0].src;
     console.log(imagenSrc);
 
+    //La siguiente funcion agrega el elemento al carrito, lo mandamos por parametros los valores
+    añadirProductoAlCarrito(titulo, precio, imagenSrc);
+}
+
+function añadirProductoAlCarrito(titulo, precio, imagenSrc){
+    var producto = document.createElement('div');
+    producto.classList.add = 'productos';
+    var productosCarrito = document.getElementsByClassName('carrito-productos')[0];
+
+    //Vamos a controlar que el producto que esta ingresando no se encuentre ya en el carrito
+    var nombresProductosCarrito = productosCarrito.getElementsByClassName('carrito-producto-titulo');
+    for(var i=0; i < nombresProductosCarrito.length; i++){
+        if(nombresProductosCarrito[i].innerText==titulo){
+            alert("El producto ya se encuentra en el carrito");
+            return;
+        }
+    }
+
+    var ProductoCarritoContenido = `
+    <div class="carrito-producto">
+        <img src="${imagenSrc}" alt="" width="80px">
+        <div class="carrito-producto-detalles">
+            <span class="carrito-producto-titulo">${titulo}</span>
+            <div class="selector-cantidad">
+                <br>
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-producto-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+            <br>
+            <span class="carrito-producto-precio">${precio}</span>
+        </div>
+        <br> 
+        <span class="btn-eliminar">
+            <i class="fa-solid fa-trash"></i>
+        </span>
+    </div>
+    `
+    producto.innerHTML = ProductoCarritoContenido;
+    productosCarrito.append(producto);
 }
